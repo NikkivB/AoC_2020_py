@@ -1,9 +1,6 @@
+# dag 6, deel 1
 file = open('../inputs/day6.txt', 'r')
 gotten_input = file.read().split('\n\n')
-file.close()
-
-#################################################################
-# part 1
 filtered_input = [string.replace('\n', '') for string in gotten_input]
 filtered_input = [string.replace(' ', '') for string in filtered_input]
 answers = ["".join(set(string)) for string in filtered_input]
@@ -12,10 +9,13 @@ amount_of_answers = 0
 for a in answers:
     amount_of_answers += len(a)
 
-print('part 1:', amount_of_answers)
+print('dag 6, deel 1:', amount_of_answers)
+file.close()
 
-#################################################################
-# part 2
+# dag 6, deel 2
+
+file = open('../inputs/day6.txt', 'r')
+gotten_input = file.read().split('\n')
 filtered_input = [string.replace(' ', '') for string in gotten_input]
 answers = ["".join(set(string)) for string in filtered_input]
 groups = []
@@ -29,6 +29,7 @@ for a in answers:
     else:
         groups[temp].append(a)
 
+file.close()
 amount = 0
 total_amount = 0
 
@@ -47,5 +48,4 @@ for group in groups:
             group_amount += 1
 
     total_amount += group_amount
-
-print('part 2:', total_amount)
+print('dag 6, deel 2:', total_amount)
