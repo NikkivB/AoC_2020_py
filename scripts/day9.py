@@ -1,6 +1,3 @@
-import json
-
-
 def get_input():
     file = open("../inputs/day9.txt", "r")
     data = file.read().split("\n")
@@ -33,7 +30,6 @@ def part2(input, value):
                 return values
             if sum(values) >= int(value):
                 break
-
 
 
 gotten_input = get_input()

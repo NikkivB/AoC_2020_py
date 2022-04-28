@@ -9,7 +9,7 @@ amount_of_answers = 0
 for a in answers:
     amount_of_answers += len(a)
 
-print('dag 6, deel 1:', amount_of_answers)
+print('part 1:', amount_of_answers)
 file.close()
 
 # dag 6, deel 2
@@ -48,4 +48,4 @@ for group in groups:
             group_amount += 1
 
     total_amount += group_amount
-print('dag 6, deel 2:', total_amount)
+print('part 2:', total_amount)
